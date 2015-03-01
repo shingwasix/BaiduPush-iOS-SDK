@@ -19,7 +19,7 @@ iOS 5.0及以上
 
 使用[cocospod](http://cocoapods.org/)进行安装,在`podfile`中添加如下代码
 
-> `pod 'SS-BaiduPushSDK'`
+> `pod 'SS-BaiduPushSDK', :git=>'https://github.com/shingwasix/BaiduPush-iOS-SDK.git'`
 
 # 官方下载
 http://developer.baidu.com/wiki/index.php?title=docs/cplat/push/sdk/clientsdk

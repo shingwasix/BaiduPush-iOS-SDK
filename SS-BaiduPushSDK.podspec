@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.author       = { "Shingwa Six" => "http://blog.waaile.com" }
   s.platform     = :ios, "5.0"
   s.source       = { :git => "https://github.com/shingwasix/BaiduPush-iOS-SDK.git", :tag => "#{s.version}" }
-  s.source_files = "LibBPush/*.h","Classes/*.{h,m}"
-  s.public_header_files = "LibBPush/*.h","Classes/*.h"
+  s.source_files = "LibBPush/*.h", "Classes/*.{h,m}"
+  s.public_header_files = "LibBPush/*.h", "Classes/*.h"
   s.preserve_paths = "LibBPush/*.a"
   s.framework = 'Foundation','CoreTelephony','SystemConfiguration'
   s.weak_framework = 'AdSupport','StoreKit'

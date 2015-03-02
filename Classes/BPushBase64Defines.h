@@ -1,5 +1,5 @@
 //
-// BPushDefines.h
+// BPushBase64Defines.h
 //
 //  Copyright 2008 Google Inc.
 //

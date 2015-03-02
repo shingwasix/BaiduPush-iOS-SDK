@@ -26,7 +26,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "BPushDefines.h"
+#import "BPushBase64Defines.h"
 
 // BPushBase64
 //

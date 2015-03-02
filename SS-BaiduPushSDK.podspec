@@ -20,5 +20,5 @@ Pod::Spec.new do |s|
   s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => "$(PODS_ROOT)/#{s.name}/LibBPush" }
   s.dependency 'JSONKit', '~> 1.4'
   s.dependency 'OpenUDID', '~> 1.0.0'
-  s.dependency 'Reachability', '~> 3.2'
+  s.dependency 'Reachability', '~> 3.1.1'
 end

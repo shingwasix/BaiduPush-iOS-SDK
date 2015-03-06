@@ -21,11 +21,11 @@ iOS 5.0及以上
 
 使用[cocoapods](http://cocoapods.org/)进行安装,在`podfile`中添加如下代码
 
-> `pod 'BPushSDK'
+> `pod 'BPushSDK'`
 
 或
 
-> `pod 'SS-BaiduPushSDK'
+> `pod 'SS-BaiduPushSDK'`
 
 # 官方下载
 http://developer.baidu.com/wiki/index.php?title=docs/cplat/push/sdk/clientsdk

@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "SS-BaiduPushSDK"
-  s.version      = "1.2.0"
+  s.version      = "1.2.0-1"
   s.license  = { 
 	:type => 'Cpoyright', 
 	:text => 'LICENSE  ©2015 Baidu, Inc. All rights reserved' 
   }
-  s.summary      = "Baidu Push SDK for iOS."
+  s.summary      = "Baidu Push SDK for iOS.Also see [BPushSDK]"
   s.homepage     = "http://developer.baidu.com/wiki/index.php?title=docs/cplat/push/sdk/clientsdk"
   s.author       = { "Shingwa Six" => "http://blog.waaile.com" }
   s.platform     = :ios, "5.0"

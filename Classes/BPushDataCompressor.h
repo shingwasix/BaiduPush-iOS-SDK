@@ -12,7 +12,7 @@
 //
 // Original source code - https://github.com/pokeb/asi-http-request/blob/v1.8.2/Classes/ASIDataCompressor.h
 //
-// Renamed by Shingwa Six(https://github.com/shingwasix) at 3/1/2015.
+// Renamed & Modifed by Shingwa Six(https://github.com/shingwasix) at 3/16/2015.
 //
 
 #import <Foundation/Foundation.h>
@@ -29,9 +29,11 @@
 // Compress the passed chunk of data
 // Passing YES for shouldFinish will finalize the deflated data - you must pass YES when you are on the last chunk of data
 - (NSData *)compressBytes:(Bytef *)bytes length:(NSUInteger)length error:(NSError **)err shouldFinish:(BOOL)shouldFinish;
+- (NSData *)compressBytes:(Bytef *)bytes length:(NSUInteger)length shouldFinish:(BOOL)shouldFinish;
 
 // Convenience method - pass it some data, and you'll get deflated data back
 + (NSData *)compressData:(NSData*)uncompressedData error:(NSError **)err;
++ (NSData *)compressData:(NSData*)uncompressedData;
 
 // Convenience method - pass it a file containing the data to compress in sourcePath, and it will write deflated data to destinationPath
 + (BOOL)compressDataFromFile:(NSString *)sourcePath toFile:(NSString *)destinationPath error:(NSError **)err;

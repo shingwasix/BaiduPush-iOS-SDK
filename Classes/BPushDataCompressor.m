@@ -7,7 +7,7 @@
 //
 // Original source code - https://github.com/pokeb/asi-http-request/blob/v1.8.2/Classes/ASIDataCompressor.m
 //
-// Renamed by Shingwa Six(https://github.com/shingwasix) at 3/1/2015.
+// Renamed & Modifed by Shingwa Six(https://github.com/shingwasix) at 3/16/2015.
 //
 
 #import "BPushDataCompressor.h"
@@ -114,6 +114,10 @@ const int BPushCompressionError = 0;
 	return outputData;
 }
 
+- (NSData *)compressBytes:(Bytef *)bytes length:(NSUInteger)length shouldFinish:(BOOL)shouldFinish
+{
+    return [self compressBytes:bytes length:length shouldFinish:shouldFinish];
+}
 
 + (NSData *)compressData:(NSData*)uncompressedData error:(NSError **)err
 {
@@ -128,7 +132,10 @@ const int BPushCompressionError = 0;
 	return outputData;
 }
 
-
++ (NSData *)compressData:(NSData*)uncompressedData
+{
+    return [self compressData:uncompressedData error:nil];
+}
 
 + (BOOL)compressDataFromFile:(NSString *)sourcePath toFile:(NSString *)destinationPath error:(NSError **)err
 {

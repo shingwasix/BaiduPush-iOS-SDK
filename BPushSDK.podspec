@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BPushSDK"
-  s.version      = "1.2.0"
+  s.version      = "1.2.0-1"
   s.license  = { 
 	:type => 'Cpoyright', 
 	:text => 'LICENSE  ©2015 Baidu, Inc. All rights reserved' 

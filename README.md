@@ -13,7 +13,7 @@
 iOS 5.1及以上
 
 # 使用
-可手动下载后参照`[sdk用户手册（ios版）.pdf](https://github.com/shingwasix/BaiduPush-iOS-SDK/blob/master/sdk%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%EF%BC%88ios%E7%89%88%EF%BC%89.pdf)`进行配置
+可手动下载后参照[sdk用户手册（ios版）.pdf](https://github.com/shingwasix/BaiduPush-iOS-SDK/blob/master/sdk%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%EF%BC%88ios%E7%89%88%EF%BC%89.pdf)进行配置
 
 或
 

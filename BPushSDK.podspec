@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
 	:text => 'LICENSE  ©2015 Baidu, Inc. All rights reserved' 
   }
   s.summary      = "Baidu Push SDK for iOS."
-  s.homepage     = "https://github.com/shingwasix/BaiduPush-iOS-SDK"
+  s.homepage     = "http://push.baidu.com/doc/ios/api"
   s.author       = { "Shingwa Six" => "http://blog.waaile.com" }
   s.platform     = :ios, "5.1"
   s.source       = { :git => "https://github.com/shingwasix/BaiduPush-iOS-SDK.git", :tag => "#{s.version}" }

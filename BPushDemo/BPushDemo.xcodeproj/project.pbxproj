@@ -12,13 +12,13 @@
 		792E5B1C1AA5963400E57331 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792E5B1A1AA5963400E57331 /* Main.storyboard */; };
 		792E5B1E1AA5963400E57331 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 792E5B1D1AA5963400E57331 /* Images.xcassets */; };
 		792E5B2D1AA5963400E57331 /* BPushDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 792E5B2C1AA5963400E57331 /* BPushDemoTests.m */; };
-		792E5B371AA5967000E57331 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E5B361AA5967000E57331 /* libBPush.a */; };
 		792E5B3A1AA5981700E57331 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E5B391AA5981700E57331 /* CoreGraphics.framework */; };
 		792E5B3C1AA5982200E57331 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E5B3B1AA5982200E57331 /* CoreTelephony.framework */; };
 		792E5B3E1AA5982E00E57331 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E5B3D1AA5982E00E57331 /* libz.dylib */; };
 		792E5B441AA5987400E57331 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E5B431AA5987400E57331 /* SystemConfiguration.framework */; };
 		795A4FA91AA6A2F3008D06FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 795A4FA71AA6A2F3008D06FB /* ViewController.m */; };
 		795A4FAA1AA6A2F3008D06FB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 795A4FA81AA6A2F3008D06FB /* ViewController.xib */; };
+		E160DE0E1B1F1D740063778D /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E160DE0C1B1F19CE0063778D /* libBPush.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,6 @@
 		792E5B261AA5963400E57331 /* BPushDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPushDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		792E5B2B1AA5963400E57331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		792E5B2C1AA5963400E57331 /* BPushDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPushDemoTests.m; sourceTree = "<group>"; };
-		792E5B361AA5967000E57331 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
-		792E5B381AA596A500E57331 /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
 		792E5B391AA5981700E57331 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		792E5B3B1AA5982200E57331 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		792E5B3D1AA5982E00E57331 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -51,19 +49,8 @@
 		795A4FA61AA6A2F3008D06FB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		795A4FA71AA6A2F3008D06FB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		795A4FA81AA6A2F3008D06FB /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		79EEBCAE1ABAABF8000AE9C6 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
-		79EEBCAF1ABAABF8000AE9C6 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
-		79EEBCB01ABAABF8000AE9C6 /* Base64Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Defines.h; sourceTree = "<group>"; };
-		79EEBCB11ABAABF8000AE9C6 /* BPushClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPushClass.h; sourceTree = "<group>"; };
-		79EEBCB21ABAABF8000AE9C6 /* BPushClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPushClass.m; sourceTree = "<group>"; };
-		79EEBCB31ABAABF8000AE9C6 /* GzipCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzipCompressor.h; sourceTree = "<group>"; };
-		79EEBCB41ABAABF8000AE9C6 /* GzipCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzipCompressor.m; sourceTree = "<group>"; };
-		79EEBCB51ABAABF8000AE9C6 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		79EEBCB61ABAABF8000AE9C6 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		79EEBCB71ABAABF8000AE9C6 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
-		79EEBCB81ABAABF8000AE9C6 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
-		79EEBCB91ABAABF8000AE9C6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		79EEBCBA1ABAABF8000AE9C6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		E160DE0B1B1F19CE0063778D /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BPush.h; path = ../../LibBPush/BPush.h; sourceTree = "<group>"; };
+		E160DE0C1B1F19CE0063778D /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBPush.a; path = ../../LibBPush/libBPush.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,11 +58,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E160DE0E1B1F1D740063778D /* libBPush.a in Frameworks */,
 				792E5B441AA5987400E57331 /* SystemConfiguration.framework in Frameworks */,
 				792E5B3E1AA5982E00E57331 /* libz.dylib in Frameworks */,
 				792E5B3C1AA5982200E57331 /* CoreTelephony.framework in Frameworks */,
 				792E5B3A1AA5981700E57331 /* CoreGraphics.framework in Frameworks */,
-				792E5B371AA5967000E57331 /* libBPush.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +99,6 @@
 		792E5B0F1AA5963400E57331 /* BPushDemo */ = {
 			isa = PBXGroup;
 			children = (
-				79EEBCAD1ABAABF8000AE9C6 /* opensource */,
 				795A4F9E1AA6A05C008D06FB /* LibBPush */,
 				795A4FA61AA6A2F3008D06FB /* ViewController.h */,
 				795A4FA71AA6A2F3008D06FB /* ViewController.m */,
@@ -155,8 +141,8 @@
 		795A4F9E1AA6A05C008D06FB /* LibBPush */ = {
 			isa = PBXGroup;
 			children = (
-				792E5B381AA596A500E57331 /* BPush.h */,
-				792E5B361AA5967000E57331 /* libBPush.a */,
+				E160DE0B1B1F19CE0063778D /* BPush.h */,
+				E160DE0C1B1F19CE0063778D /* libBPush.a */,
 			);
 			name = LibBPush;
 			sourceTree = "<group>";
@@ -170,26 +156,6 @@
 				792E5B391AA5981700E57331 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		79EEBCAD1ABAABF8000AE9C6 /* opensource */ = {
-			isa = PBXGroup;
-			children = (
-				79EEBCAE1ABAABF8000AE9C6 /* Base64.h */,
-				79EEBCAF1ABAABF8000AE9C6 /* Base64.m */,
-				79EEBCB01ABAABF8000AE9C6 /* Base64Defines.h */,
-				79EEBCB11ABAABF8000AE9C6 /* BPushClass.h */,
-				79EEBCB21ABAABF8000AE9C6 /* BPushClass.m */,
-				79EEBCB31ABAABF8000AE9C6 /* GzipCompressor.h */,
-				79EEBCB41ABAABF8000AE9C6 /* GzipCompressor.m */,
-				79EEBCB51ABAABF8000AE9C6 /* JSONKit.h */,
-				79EEBCB61ABAABF8000AE9C6 /* JSONKit.m */,
-				79EEBCB71ABAABF8000AE9C6 /* OpenUDID.h */,
-				79EEBCB81ABAABF8000AE9C6 /* OpenUDID.m */,
-				79EEBCB91ABAABF8000AE9C6 /* Reachability.h */,
-				79EEBCBA1ABAABF8000AE9C6 /* Reachability.m */,
-			);
-			path = opensource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,8 +377,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Baidu Netcom Science & Technology Co.,Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Baidu Netcom Science & Technology Co.,Ltd.";
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				INFOPLIST_FILE = BPushDemo/Info.plist;
@@ -420,10 +386,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BPushDemo",
+					"/Users/baidu/Desktop/push-ios-sdk-1.4.0-md/LibBPush",
+					"/Users/baidu/Desktop/Baidu-Push-SDK-iOS-1.4.0/LibBPush",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "67f76999-c4a5-4c26-b4b1-33fdb241afa9";
+				PROVISIONING_PROFILE = "dbbe375a-8617-40fd-8a16-43311b5093d4";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -432,8 +400,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Baidu Netcom Science & Technology Co.,Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Baidu Netcom Science & Technology Co.,Ltd.";
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				INFOPLIST_FILE = BPushDemo/Info.plist;
@@ -441,10 +409,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BPushDemo",
+					"/Users/baidu/Desktop/push-ios-sdk-1.4.0-md/LibBPush",
+					"/Users/baidu/Desktop/Baidu-Push-SDK-iOS-1.4.0/LibBPush",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "67f76999-c4a5-4c26-b4b1-33fdb241afa9";
+				PROVISIONING_PROFILE = "dbbe375a-8617-40fd-8a16-43311b5093d4";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

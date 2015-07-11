@@ -10,7 +10,7 @@
 #import "BPush.h"
 #import "ViewController.h"
 
-@interface AppDelegate ()<BPushDelegate>
+@interface AppDelegate ()
 
 @property (nonatomic,strong) ViewController *viewController;
 
@@ -41,15 +41,9 @@
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
     }
 
-    #warning 上线 AppStore 时需要修改 pushMode
+    #warning 上线 AppStore 时需要修改 pushMode 需要修改Apikey为自己的Apikey
     // 在 App 启动时注册百度云推送服务，需要提供 Apikey
-    [BPush registerChannel:launchOptions apiKey:@"在云推送官网注册后获取" pushMode:BPushModeDevelopment isDebug:YES];
-    
-//    [BPush setupChannel:launchOptions];
-    
-    // 设置 BPush 的回调
-    [BPush setDelegate:self];
-    
+    [BPush registerChannel:launchOptions apiKey:@"DF0eNG6TNUqEvrVyQhIRU0Ea" pushMode:BPushModeProduction withFirstAction:nil withSecondAction:nil withCategory:nil isDebug:YES];
     // App 是用户点击推送消息启动
     NSDictionary *userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     if (userInfo) {
@@ -57,9 +51,22 @@
         [BPush handleNotification:userInfo];
     }
     
-    
+    //角标清0
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    /*
+     // 测试本地通知
+    [self performSelector:@selector(testLocalNotifi) withObject:nil afterDelay:1.0];
+    */
     return YES;
 }
+
+- (void)testLocalNotifi
+{
+    NSLog(@"测试本地通知啦！！！");
+    NSDate *fireDate = [[NSDate new] dateByAddingTimeInterval:5];
+    [BPush localNotification:fireDate alertBody:@"这是本地通知" badge:3 withFirstAction:@"打开" withSecondAction:@"关闭" userInfo:nil soundName:nil region:nil regionTriggersOnce:YES category:nil];
+}
+
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
@@ -83,7 +90,9 @@
 {
     NSLog(@"test:%@",deviceToken);
     [BPush registerDeviceToken:deviceToken];
-    [BPush bindChannel];
+    [BPush bindChannelWithCompleteHandler:^(id result, NSError *error) {
+        [self.viewController addLogString:[NSString stringWithFormat:@"Method: %@\n%@",BPushRequestMethodBind,result]];
+    }];
     
     // 打印到日志 textView 中
     [self.viewController addLogString:[NSString stringWithFormat:@"Register use deviceToken : %@",deviceToken]];
@@ -106,11 +115,10 @@
     NSLog(@"%@",userInfo);
 }
 
-#pragma mark Push Delegate
-- (void)onMethod:(NSString*)method response:(NSDictionary*)data
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
-    [self.viewController addLogString:[NSString stringWithFormat:@"Method: %@\n%@",method,data]];
-    
+    NSLog(@"接收本地通知啦！！！");
+    [BPush showLocalNotificationAtFront:notification identifierKey:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

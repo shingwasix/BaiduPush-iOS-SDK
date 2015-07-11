@@ -1,31 +1,12 @@
 //
-//  BPush.h
-//
-//  Created by LQMacBookPro on 15/1/21.
-//  Copyright (c) 2015年 chengwei06. All rights reserved.
-//
-//
+//  BNPush.h
+
+//  百度云推送iOS版本头文件 //
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@protocol BPushDelegate <NSObject>
-
-/**
- * @brief 调用云推送 API 后的回调方法，获取请求返回的数据
- * @param
- *     method - 请求的方法，如bind,set_tags
- *     response - 返回结果字典
- * @return
- *     none
- */
-- (void)onMethod:(NSString*)method response:(NSDictionary*)data;
-@end
-
-/**
- * @brief 回调方法 <#onMethod:reponse#> 中 reponse 字典中的键值，用于获取对应的数据
- *
- */
 extern NSString *const BPushRequestErrorCodeKey;
 extern NSString *const BPushRequestErrorMsgKey;
 extern NSString *const BPushRequestRequestIdKey;
@@ -35,7 +16,7 @@ extern NSString *const BPushRequestChannelIdKey;
 extern NSString *const BPushRequestResponseParamsKey; // 服务端返回的原始值，其内容和以上的部分值可能有重合
 
 /**
- * @brief 在回调方法 <#onMethod:reponse#> 中可通过 BPushRequestMethodKey 与 method 比较判断当前回调属于哪一个方法
+ * @brief 回调方法名字
  *
  */
 extern NSString *const BPushRequestMethodBind;
@@ -49,25 +30,28 @@ extern NSString *const BPushRequestMethodListTag;
  */
 typedef NS_ENUM(NSInteger, BPushMode){
     BPushModeDevelopment, // 开发测试环境
-    BPushModeProduction, // AppStore 上线环境
+    BPushModeProduction, // AppStore 上线环境  AdHoc 内部测试用的生产环境
 };
+
+/**
+ *	@brief BPushCallBack
+ *
+ *	@discussion 用来设定异步调用的回调
+ */
+typedef void (^BPushCallBack)(id result, NSError *error);
+
 
 @interface BPush : NSObject
 /**
  * @brief 注册百度云推送 SDK
  * @param
- *     launchOptions - App 启动时系统提供的参数，表明了 App 是通过什么方式启动的
+ *     launchOptions - App 启动时系统提供的参数，表明了 App 是通过什么方式启动的 apiKey - 通过apikey注册百度推送, mode - 当前推送的环境, isdebug - 是否是debug模式。
+ * IOS8新参数
+ * @param rightAction - 快捷回复通知的第一个按钮名字默认为打开应用
+ * @param leftAction - 第二个按钮名字默认会关闭应用
+ * @param category 自定义参数 一组动作的唯一标示 需要与服务端aps的category字段匹配才能展现通知样式
  */
-+ (void)registerChannel:(NSDictionary *)launchOptions apiKey:(NSString *)apikey pushMode:(BPushMode)mode isDebug:(BOOL)isdebug;
-
-/**
- * @brief 设置delegate，该delegate必须实现 <#onMethod:reponse#> 方法
- * @param
- *     delegate - 请求发送完成后，结果的回调
- * @return
- *     none
- */
-+ (void)setDelegate:(id<BPushDelegate>) delegate;
++ (void)registerChannel:(NSDictionary *)launchOptions apiKey:(NSString *)apikey pushMode:(BPushMode)mode withFirstAction:(NSString *)leftAction withSecondAction:(NSString *)rightAction withCategory:(NSString *)category isDebug:(BOOL)isdebug;
 
 /**
  * @brief 向云推送注册 device token，只有在注册deviceToken后才可以绑定
@@ -90,74 +74,76 @@ typedef NS_ENUM(NSInteger, BPushMode){
 /**
  * 设置 Bduss
  * @param
- *     bduss -
+ *     bduss - 百度账号体系相关 Bduss
  * @return
  *     none
  */
 + (void)setBduss:(NSString *)bduss forApp:(NSString *)appid;
 
 /**
- * @brief 绑定channel. 如果用户有注册delegate并实现onMethod:response:，将会回调该函数，通过method参数来判断返回的方法。
+ * @brief 绑定channel.将会在回调中看获得channnelid appid userid 等。
  * @param
  *     none
  * @return
  *     none
  */
-+ (void)bindChannel;
+
+
++ (void)bindChannelWithCompleteHandler:(BPushCallBack)handler;
 
 /**
- * @brief解除对 channel 的绑定. 如果用户有注册delegate并实现onMethod:response:，将会回调该函数，通过method参数来判断返回的方法。
+ * @brief解除对 channel 的绑定。
  * @param
  *     none
  * @return
  *     none
  */
-+ (void)unbindChannel;
++ (void)unbindChannelWithCompleteHandler:(BPushCallBack)handler;
 
 /**
- * @brief设置tag。 如果用户有注册delegate并实现onMethod:response:，将会回调该函数，通过method参数来判断返回的方法。
+ * @brief设置tag。
  * @param
  *     tag - 需要设置的tag
  * @return
  *     none
  */
-+ (void)setTag:(NSString *)tag;
++ (void)setTag:(NSString *)tag withCompleteHandler:(BPushCallBack)handler;
 
 /**
- * @brief设置多个tag。如果用户有注册delegate并实现onMethod:response:，将会回调该函数，通过method参数来判断返回的方法。
+ * @brief设置多个tag。
  * @param
  *     tags - 需要设置的tag数组
  * @return
  *     none
  */
-+ (void)setTags:(NSArray *)tags;
++ (void)setTags:(NSArray *)tags withCompleteHandler:(BPushCallBack)handler;
 
 /**
- * @brief删除tag。如果用户有注册delegate并实现onMethod:response:，将会回调该函数，通过method参数来判断返回的方法。
+ * @brief删除tag。
  * @param
  *     tag - 需要删除的tag
  * @return
  *     none
  */
-+ (void)delTag:(NSString *)tag;
++ (void)delTag:(NSString *)tag withCompleteHandler:(BPushCallBack)handler;
 
 /**
- * @brief删除多个tag。如果用户有注册delegate并实现onMethod:response:，将会回调该函数，通过method参数来判断返回的方法。
+ * @brief删除多个tag。
  * @param
  *     tags - 需要删除的tag数组
  * @return
  *     none
  */
-+ (void)delTags:(NSArray *)tags;
++ (void)delTags:(NSArray *)tags withCompleteHandler:(BPushCallBack)handler;
 
 /**
- * @brief获取当前设备应用的tag列表。如果用户有注册delegate并实现onMethod:response:，将会回调该函数，通过method参数来判断返回的方法。
+ * @brief获取当前设备应用的tag列表。
  * @param
  *     none
  * @return
  *     none
  */
-+ (void)listTags;
++ (void)listTagsWithCompleteHandler:(BPushCallBack)handler;
 
 /**
  * @brief 在didReceiveRemoteNotification中调用，用于推送反馈
@@ -178,6 +164,51 @@ typedef NS_ENUM(NSInteger, BPushMode){
 + (NSString *)getChannelId;
 + (NSString *)getUserId;
 + (NSString *)getAppId;
+
+/**
+ * 本地推送，最多支持64个
+ * @param fireDate 本地推送触发的时间
+ * @param alertBody 本地推送需要显示的内容
+ * @param badge 角标的数字。如果不需要改变角标传-1
+ * @param alertAction 弹框的按钮显示的内容（IOS 8默认为"打开",其他默认为"启动"）
+ * @param userInfo 自定义参数，可以用来标识推送和增加附加信息
+ * @param soundName 自定义通知声音，设置为nil为默认声音
+ 
+ * IOS8新参数
+ * @param region 自定义参数
+ * @param regionTriggersOnce 自定义参数 到达某一区域时，是否触发本地通知
+ * @param category 自定义参数 一组动作的唯一标示 默认为nil
+ */
+
+
++ (void)localNotification:(NSDate *)date alertBody:(NSString *)body badge:(int)bage  withFirstAction:(NSString *)leftAction withSecondAction:(NSString *)rightAction userInfo:(NSDictionary *)userInfo soundName:(NSString *)soundName region:(CLRegion *)region regionTriggersOnce:(BOOL)regionTriggersOnce category:(NSString *)category;
+
+/**
+ * 本地推送在前台推送。默认App在前台运行时不会进行弹窗，在程序接收通知调用此接口可实现指定的推送弹窗。
+ * @param notification 本地推送对象
+ * @param notificationKey 需要前台显示的本地推送通知的标示符
+ */
++ (void)showLocalNotificationAtFront:(UILocalNotification *)notification identifierKey:(NSString *)notificationKey;
+/**
+ * 删除本地推送
+ * @param notificationKey 本地推送标示符
+ * @param localNotification 本地推送对象
+ */
++ (void)deleteLocalNotificationWithIdentifierKey:(NSString *)notificationKey;
++ (void)deleteLocalNotification:(UILocalNotification *)localNotification;
+
+/**
+ * 获取指定通知
+ * @param notificationKey 本地推送标示符
+ * @return  本地推送对象数组,[array count]为0时表示没找到
+ */
++ (NSArray *)findLocalNotificationWithIdentifier:(NSString *)notificationKey;
+
+/**
+ * 清除所有本地推送对象
+ */
++ (void)clearAllLocalNotifications;
+
 
 @end
 

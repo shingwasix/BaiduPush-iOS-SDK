@@ -1,7 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '5.1'
 
-target 'BPushSDKExample', :exclusive => true do
+target 'BPushSDK', :exclusive => true do
     pod "BPushSDK", :path => "../"
 end
 

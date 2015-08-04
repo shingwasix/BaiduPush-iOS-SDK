@@ -26,7 +26,7 @@ iOS 5.1及以上
 
 或
 
-使用[CocoaPods](http://cocoapods.org/)进行安装,在`podfile`中添加如下代码
+使用[CocoaPods](http://cocoapods.org/)进行安装,在`Podfile`中添加如下代码
 
 ```ruby
 pod 'BPushSDK', '~> 1.4.0'

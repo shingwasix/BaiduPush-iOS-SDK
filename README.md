@@ -30,13 +30,13 @@ iOS 5.1及以上
 
 ```ruby
 pod 'BPushSDK', '~> 1.4.0'
-```ruby
+```
 
 或
 
 ```ruby
 pod 'SS-BaiduPushSDK', '~> 1.4.0'
-```ruby
+```
 
 ## 官方下载
 http://push.baidu.com/sdk/push_client_sdk_for_ios

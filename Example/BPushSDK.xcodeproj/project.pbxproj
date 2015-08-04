@@ -18,7 +18,6 @@
 		4FF750051B70A3E4000DAB3E /* Pods-BPushSDK.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4FF750031B70A3E4000DAB3E /* Pods-BPushSDK.debug.xcconfig */; };
 		4FF750061B70A3E4000DAB3E /* Pods-BPushSDK.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4FF750041B70A3E4000DAB3E /* Pods-BPushSDK.release.xcconfig */; };
 		53E10AC7DBDF42DD3F3F67A0 /* libPods-BPushSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4342501E6DBFDF20604898E6 /* libPods-BPushSDK.a */; };
-		C246BC320B4F57E12F017281 /* libPods-BPushSDKExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE410718A7A5C340F4703CF8 /* libPods-BPushSDKExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C246BC320B4F57E12F017281 /* libPods-BPushSDKExample.a in Frameworks */,
 				53E10AC7DBDF42DD3F3F67A0 /* libPods-BPushSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

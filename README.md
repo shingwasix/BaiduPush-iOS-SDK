@@ -1,6 +1,6 @@
 # BaiduPush-iOS-SDK
 
-[![CI Status](http://img.shields.io/travis/shingwasix/BPushSDK.svg?style=flat)](https://travis-ci.org/shingwasix/BPushSDK)
+[![CI Status](http://img.shields.io/travis/shingwasix/BaiduPush-iOS-SDK.svg?style=flat)](https://travis-ci.org/shingwasix/BaiduPush-iOS-SDK)
 [![Version](https://img.shields.io/cocoapods/v/BPushSDK.svg?style=flat)](http://cocoapods.org/pods/BPushSDK)
 [![License](https://img.shields.io/cocoapods/l/BPushSDK.svg?style=flat)](http://cocoapods.org/pods/BPushSDK)
 [![Platform](https://img.shields.io/cocoapods/p/BPushSDK.svg?style=flat)](http://cocoapods.org/pods/BPushSDK)

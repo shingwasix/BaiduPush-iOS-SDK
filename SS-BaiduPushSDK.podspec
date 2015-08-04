@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.license      = 'LICENSE ©2015 Baidu, Inc. All rights reserved'
   s.summary      = "Baidu Push SDK for iOS.Also see [BPushSDK]"
   s.homepage     = "http://push.baidu.com/doc/ios/api"
-  s.author       = { "Shingwa Six" => "http://blog.waaile.com" }
+  s.author       = { "Shingwa Six" => "http://github.com/shingwasix" }
   s.platform     = :ios, "5.1"
   s.source       = { :git => "https://github.com/shingwasix/BaiduPush-iOS-SDK.git", :tag => s.version.to_s }
   s.source_files = "LibBPush/*.h"

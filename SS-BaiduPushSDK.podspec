@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
   s.vendored_libraries = "LibBPush/*.a"
   s.framework = 'Foundation','CoreTelephony','SystemConfiguration'
   s.libraries = 'z'
-  s.requires_arc = true
+  s.requires_arc = false
 end

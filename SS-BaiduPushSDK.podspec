@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SS-BaiduPushSDK"
-  s.version      = "1.4.0-1"
+  s.version      = "1.4.1"
   s.license      = 'LICENSE ©2015 Baidu, Inc. All rights reserved'
   s.summary      = "Baidu Push SDK for iOS.Also see [BPushSDK]"
   s.homepage     = "http://push.baidu.com/doc/ios/api"
@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
   s.vendored_libraries = "LibBPush/*.a"
   s.framework = 'Foundation','CoreTelephony','SystemConfiguration'
   s.libraries = 'z'
-  s.requires_arc = false
+  s.requires_arc = true
 end

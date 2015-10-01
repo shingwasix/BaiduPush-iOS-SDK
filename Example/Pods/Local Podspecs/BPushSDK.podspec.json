@@ -1,22 +1,22 @@
 {
   "name": "BPushSDK",
-  "version": "1.4.0-1",
+  "version": "1.4.2",
   "license": "LICENSE ©2015 Baidu, Inc. All rights reserved",
   "summary": "Baidu Push SDK for iOS.",
   "homepage": "http://push.baidu.com/doc/ios/api",
   "authors": {
-    "Shingwa Six": "http://blog.waaile.com"
+    "Shingwa Six": "http://github.com/shingwasix"
   },
   "platforms": {
     "ios": "5.1"
   },
   "source": {
     "git": "https://github.com/shingwasix/BaiduPush-iOS-SDK.git",
-    "tag": "1.4.0-1"
+    "tag": "1.4.2"
   },
-  "source_files": "LibBPush/*.h",
-  "public_header_files": "LibBPush/*.h",
-  "vendored_libraries": "LibBPush/*.a",
+  "source_files": "Official-Sources/LibBPush/*.h",
+  "public_header_files": "Official-Sources/LibBPush/*.h",
+  "vendored_libraries": "Official-Sources/LibBPush/*.a",
   "frameworks": [
     "Foundation",
     "CoreTelephony",

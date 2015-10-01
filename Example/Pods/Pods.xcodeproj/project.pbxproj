@@ -22,16 +22,16 @@
 		7F319CCB4E6C3A073D84244BB200BB35 /* Pods-BPushSDKTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BPushSDKTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		87A6B009283A107DA4D3B284271E13DA /* Pods-BPushSDKTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BPushSDKTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9570C5D48EC1C1A9A08AD0530F76819F /* libPods-BPushSDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BPushSDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A109F992BDE03D8F18C4ECB81E63675D /* libBPush.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libBPush.a; path = "Official-Sources/LibBPush/libBPush.a"; sourceTree = "<group>"; };
 		A737C72B12387A03E491CD9CB4B170A0 /* Pods-BPushSDK-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BPushSDK-acknowledgements.plist"; sourceTree = "<group>"; };
 		AE32CB5148391A678FFA162E2880BA50 /* libPods-BPushSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BPushSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57566D24D2DC740C60D72D0E596C49D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		B8285546BDC5CEB9D9A181C22DCE0279 /* Pods-BPushSDKTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BPushSDKTests-dummy.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D70E1EB42B513E54A0F19081FCFB93AF /* libBPush.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libBPush.a; path = LibBPush/libBPush.a; sourceTree = "<group>"; };
-		DA7A702A6C953B7A05967A122A334EF0 /* BPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
 		E0B11719B1E8AD666935A76760F54534 /* Pods-BPushSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BPushSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		F07F524247134972C33FC72115792788 /* Pods-BPushSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BPushSDK.release.xcconfig"; sourceTree = "<group>"; };
 		F4263046F524509B32D9DE75A8D86974 /* Pods-BPushSDK-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BPushSDK-resources.sh"; sourceTree = "<group>"; };
+		FABD452CDB6E95568894728165EF510A /* BPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +68,18 @@
 			path = "Target Support Files/Pods-BPushSDK";
 			sourceTree = "<group>";
 		};
+		14FFBF5EE42D8AF6A3DBD46E212D7722 /* LibBPush */ = {
+			isa = PBXGroup;
+			children = (
+				FABD452CDB6E95568894728165EF510A /* BPush.h */,
+			);
+			path = LibBPush;
+			sourceTree = "<group>";
+		};
 		2C7627DF07AF7DD6227A5139A89F0793 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DCF8AA75FDF3941FA8630E6F3A72452C /* BPushSDK */,
+				A7A2C768657AD4BB86487124D96DD416 /* BPushSDK */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -109,20 +117,14 @@
 			path = "Target Support Files/Pods-BPushSDKTests";
 			sourceTree = "<group>";
 		};
-		942C39FB074DB2BBF22F5105C7665577 /* LibBPush */ = {
+		A7A2C768657AD4BB86487124D96DD416 /* BPushSDK */ = {
 			isa = PBXGroup;
 			children = (
-				DA7A702A6C953B7A05967A122A334EF0 /* BPush.h */,
+				C2D641DEF88CBF89C874D82EAB06247C /* Frameworks */,
+				CC2EA61B62CEFF52E59FBEA8D714693B /* Official-Sources */,
 			);
-			path = LibBPush;
-			sourceTree = "<group>";
-		};
-		9504A9334591790FBAF5D51EE35D9DBF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D70E1EB42B513E54A0F19081FCFB93AF /* libBPush.a */,
-			);
-			name = Frameworks;
+			name = BPushSDK;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -142,6 +144,22 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		C2D641DEF88CBF89C874D82EAB06247C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A109F992BDE03D8F18C4ECB81E63675D /* libBPush.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC2EA61B62CEFF52E59FBEA8D714693B /* Official-Sources */ = {
+			isa = PBXGroup;
+			children = (
+				14FFBF5EE42D8AF6A3DBD46E212D7722 /* LibBPush */,
+			);
+			path = "Official-Sources";
+			sourceTree = "<group>";
+		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,16 +167,6 @@
 				9570C5D48EC1C1A9A08AD0530F76819F /* libPods-BPushSDKTests.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		DCF8AA75FDF3941FA8630E6F3A72452C /* BPushSDK */ = {
-			isa = PBXGroup;
-			children = (
-				9504A9334591790FBAF5D51EE35D9DBF /* Frameworks */,
-				942C39FB074DB2BBF22F5105C7665577 /* LibBPush */,
-			);
-			name = BPushSDK;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

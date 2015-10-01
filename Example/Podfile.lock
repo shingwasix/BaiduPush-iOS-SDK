@@ -1,14 +1,14 @@
 PODS:
-  - BPushSDK (1.4.0-1)
+  - BPushSDK (1.4.2)
 
 DEPENDENCIES:
   - BPushSDK (from `../`)
 
 EXTERNAL SOURCES:
   BPushSDK:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  BPushSDK: b8aabced2acc847abe0b8605f93f5d93da8947e6
+  BPushSDK: 401b9868ad1af4d79718de8a93bc974868c7ea15
 
 COCOAPODS: 0.38.2

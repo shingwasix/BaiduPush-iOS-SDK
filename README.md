@@ -13,10 +13,8 @@
 ## 校验
 
 [libBPush.a](https://github.com/shingwasix/BaiduPush-iOS-SDK/blob/1.4.2/Official-Sources/LibBPush/libBPush.a)
-
-MD5:`4211548f4ede6d040ec56c2f7646f520`
-
-SHA1:`a727d96113f09b5488e39fcc3f767da3722136f0`
+- MD5:`4211548f4ede6d040ec56c2f7646f520`
+- SHA1:`a727d96113f09b5488e39fcc3f767da3722136f0`
 
 ## 版本
 1.4.2 [更新时间:2015-09-24]

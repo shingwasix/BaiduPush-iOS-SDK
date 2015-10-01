@@ -1,6 +1,6 @@
 //
-//  BNPush.h
-
+//  BPush.h
+//  Version: 1.4.2
 //  百度云推送iOS版本头文件 //
 //
 

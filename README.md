@@ -12,23 +12,24 @@
 
 ## 校验
 
-[libBPush.a](https://github.com/shingwasix/BaiduPush-iOS-SDK/blob/1.4.2/Official-Sources/LibBPush/libBPush.a)
-- MD5:`4211548f4ede6d040ec56c2f7646f520`
-- SHA1:`a727d96113f09b5488e39fcc3f767da3722136f0`
+[libBPush.a](https://github.com/shingwasix/BaiduPush-iOS-SDK/blob/1.4.3/Official-Sources/LibBPush/libBPush.a)
+- MD5:`9e0eb8730cf7a21fa38a8439bd139f8d`
+- SHA1:`adc4e078c2c4d03ec3f5af12501aff51735338e4`
 
 ## 版本
-1.4.2 [更新时间:2015-09-24]
+1.4.3 [更新时间:2015-10-16]
 
 ## 兼容平台
 iOS 5.1及以上
 
 ## 官方更新说明
-1. 主要针对iOS 9系统做了修复，优化了双demo,在iOS 7 和6上不再报错，添加了标签组的操作。
-2. 开启了bitcode编码，静态包大小有所减小。
-3. 优化了sdk缓存时对文件的读写操作。
+1. 优化日志上传策略，更准确的获取统计数据。
+2. 添加崩溃日志上传，第一时间搜集到崩溃信息，更快的优化sdk。
+3. demo 去除警告，添加接受到通知后，在前台、后台、未激活状态下，点击通知跳转到指定页面,包括如何设置角标等。
+4. 配合服务端适配httpsTLS1.2协议，sdk全面适配iOS9。
 
 ## 使用
-可手动下载后参照[百度push服务sdk用户手册（ios版）.pdf](https://github.com/shingwasix/BaiduPush-iOS-SDK/blob/1.4.2/Official-Sources/%E7%99%BE%E5%BA%A6push%E6%9C%8D%E5%8A%A1sdk%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%EF%BC%88ios%E7%89%88%EF%BC%89.pdf)进行配置
+可手动下载后参照[百度push服务sdk用户手册（ios版）.pdf](https://github.com/shingwasix/BaiduPush-iOS-SDK/blob/1.4.3/Official-Sources/%E7%99%BE%E5%BA%A6push%E6%9C%8D%E5%8A%A1sdk%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%EF%BC%88ios%E7%89%88%EF%BC%89.pdf)进行配置
 
 或
 

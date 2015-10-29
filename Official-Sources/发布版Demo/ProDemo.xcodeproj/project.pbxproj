@@ -18,6 +18,8 @@
 		E15238081B53A76E00AC56FB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15238001B53A76E00AC56FB /* ViewController.xib */; };
 		E15238261B53AC2000AC56FB /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E15238251B53AC2000AC56FB /* libBPush.a */; };
 		E1A51A881BB2D04B005A948A /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = E1A51A871BB2D04B005A948A /* test.caf */; settings = {ASSET_TAGS = (); }; };
+		E1F8DEB91BCF891500B5B1D3 /* SkipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F8DEB71BCF891500B5B1D3 /* SkipViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E1F8DEBA1BCF891500B5B1D3 /* SkipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F8DEB81BCF891500B5B1D3 /* SkipViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		E15238241B53AC2000AC56FB /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
 		E15238251B53AC2000AC56FB /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
 		E1A51A871BB2D04B005A948A /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
+		E1F8DEB61BCF891500B5B1D3 /* SkipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkipViewController.h; sourceTree = "<group>"; };
+		E1F8DEB71BCF891500B5B1D3 /* SkipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkipViewController.m; sourceTree = "<group>"; };
+		E1F8DEB81BCF891500B5B1D3 /* SkipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkipViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,9 @@
 			children = (
 				E15237F61B53A76E00AC56FB /* AppDelegate.h */,
 				E15237F71B53A76E00AC56FB /* AppDelegate.m */,
+				E1F8DEB61BCF891500B5B1D3 /* SkipViewController.h */,
+				E1F8DEB71BCF891500B5B1D3 /* SkipViewController.m */,
+				E1F8DEB81BCF891500B5B1D3 /* SkipViewController.xib */,
 				E15237FA1B53A76E00AC56FB /* Images.xcassets */,
 				E15237FB1B53A76E00AC56FB /* Info.plist */,
 				E15237FD1B53A76E00AC56FB /* main.m */,
@@ -169,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1A51A881BB2D04B005A948A /* test.caf in Resources */,
+				E1F8DEBA1BCF891500B5B1D3 /* SkipViewController.xib in Resources */,
 				E15238031B53A76E00AC56FB /* Images.xcassets in Resources */,
 				E15238081B53A76E00AC56FB /* ViewController.xib in Resources */,
 			);
@@ -182,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15238071B53A76E00AC56FB /* ViewController.m in Sources */,
+				E1F8DEB91BCF891500B5B1D3 /* SkipViewController.m in Sources */,
 				E15238061B53A76E00AC56FB /* main.m in Sources */,
 				E15238011B53A76E00AC56FB /* AppDelegate.m in Sources */,
 			);

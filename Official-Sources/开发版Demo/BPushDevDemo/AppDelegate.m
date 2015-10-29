@@ -6,8 +6,15 @@
 #import "AppDelegate.h"
 #import "BPush.h"
 #import "ViewController.h"
+#import "SkipViewController.h"
 
-@interface AppDelegate ()
+// rgb颜色转换（16进制->10进制）
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+@interface AppDelegate ()<UIAlertViewDelegate>
+{
+    UITabBarController *_tabBarCtr;
+}
 
 @property (nonatomic,strong) ViewController *viewController;
 
@@ -15,18 +22,43 @@
 
 @implementation AppDelegate
 
+#warning
+//***********************关于如何设置badge角标加1的方法***********************
+
+/*
+ 服务端推送的badge是几就会显示几,你只需要跟服务端同步消息数目，然后让服务端自己，该推送几，就推送几,比如你应用打开的时候，或者进入后台的时候跟服务端同步，这个点，需要你们自己去设计，应用没有消息的时候，服务端推送了1，当应用打开时候，告诉服务端，app没点击通知，那下次应用推送2,依次类推。
+ */
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    _tabBarCtr = [[UITabBarController alloc]init];
+    self.window.rootViewController = _tabBarCtr;
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:self.viewController];
+    // 根视图是nav
+    _tabBarCtr.viewControllers = @[nav];
+    /*
+    // 根视图是普通的viewctr
+    _tabBarCtr.viewControllers = @[self.viewController]; */
     [self.window makeKeyAndVisible];
-                   
-    [[UINavigationBar appearance] setTintColor:[UIColor grayColor]];
-    [application setStatusBarHidden:YES];
     
-
+    UIColor * cc = [UIColor whiteColor];
+    NSDictionary * dict = [NSDictionary dictionaryWithObject:cc forKey:UITextAttributeTextColor];
+    nav.navigationBar.titleTextAttributes = dict;
+    [nav.navigationBar setTranslucent:NO];//设置navigationbar的半透明
+//    [_tabBarCtr.tabBar setTranslucent:NO];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0)
+    {
+        [nav.navigationBar setBarTintColor:UIColorFromRGB(0x39526d)];
+        [_tabBarCtr.tabBar setBarTintColor:UIColorFromRGB(0x39526d)];
+    }
+    else
+    {
+        [nav.navigationBar setTintColor:UIColorFromRGB(0x39526d)];
+        [_tabBarCtr.tabBar setTintColor:UIColorFromRGB(0x39526d)];
+    }
     // iOS8 下需要使用新的 API
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
         UIUserNotificationType myTypes = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
@@ -68,13 +100,29 @@
     [BPush localNotification:fireDate alertBody:@"这是本地通知" badge:3 withFirstAction:@"打开" withSecondAction:@"关闭" userInfo:nil soundName:nil region:nil regionTriggersOnce:YES category:nil];
 }
 
-
+// 此方法是 用户点击了通知，应用在前台 或者开启后台并且应用在后台 时调起
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
+     completionHandler(UIBackgroundFetchResultNewData);
     // 打印到日志 textView 中
+    NSLog(@"********** iOS7.0之后 background **********");
+    // 应用在前台 或者后台开启状态下，不跳转页面，让用户选择。
+    if (application.applicationState == UIApplicationStateActive || application.applicationState == UIApplicationStateBackground) {
+        NSLog(@"acitve or background");
+        UIAlertView *alertView =[[UIAlertView alloc]initWithTitle:@"收到一条消息" message:userInfo[@"aps"][@"alert"] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alertView show];
+    }
+    else//杀死状态下，直接跳转到跳转页面。
+    {
+        SkipViewController *skipCtr = [[SkipViewController alloc]init];
+        // 根视图是nav 用push 方式跳转
+        [_tabBarCtr.selectedViewController pushViewController:skipCtr animated:YES];
+        /*
+        // 根视图是普通的viewctr 用present跳转
+        [_tabBarCtr.selectedViewController presentViewController:skipCtr animated:YES completion:nil]; */
+    }
     [self.viewController addLogString:[NSString stringWithFormat:@"backgroud : %@",userInfo]];
-    completionHandler(UIBackgroundFetchResultNewData);
-
+    
 }
 
 // 在 iOS8 系统中，还需要添加这个方法。通过新的 API 注册推送服务
@@ -119,6 +167,19 @@
 {
     // App 收到推送的通知
     [BPush handleNotification:userInfo];
+    NSLog(@"********** ios7.0之前 **********");
+    // 应用在前台 或者后台开启状态下，不跳转页面，让用户选择。
+    if (application.applicationState == UIApplicationStateActive || application.applicationState == UIApplicationStateBackground) {
+        NSLog(@"acitve or background");
+        UIAlertView *alertView =[[UIAlertView alloc]initWithTitle:@"收到一条消息" message:userInfo[@"aps"][@"alert"] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alertView show];
+    }
+    else//杀死状态下，直接跳转到跳转页面。
+    {
+        SkipViewController *skipCtr = [[SkipViewController alloc]init];
+        [_tabBarCtr.selectedViewController pushViewController:skipCtr animated:YES];
+    }
+
     [self.viewController addLogString:[NSString stringWithFormat:@"Received Remote Notification :\n%@",userInfo]];
     
     NSLog(@"%@",userInfo);
@@ -128,6 +189,18 @@
 {
     NSLog(@"接收本地通知啦！！！");
     [BPush showLocalNotificationAtFront:notification identifierKey:nil];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        SkipViewController *skipCtr = [[SkipViewController alloc]init];
+        // 根视图是nav 用push 方式跳转
+        [_tabBarCtr.selectedViewController pushViewController:skipCtr animated:YES];
+        /*
+         // 根视图是普通的viewctr 用present跳转
+         [_tabBarCtr.selectedViewController presentViewController:skipCtr animated:YES completion:nil]; */
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

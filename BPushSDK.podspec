@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BPushSDK"
-  s.version      = "1.4.2"
+  s.version      = "1.4.3"
   s.license      = 'LICENSE ©2015 Baidu, Inc. All rights reserved'
   s.summary      = "Baidu Push SDK for iOS."
   s.homepage     = "http://push.baidu.com/doc/ios/api"

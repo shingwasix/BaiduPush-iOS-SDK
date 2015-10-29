@@ -167,6 +167,7 @@
 				4FF74FD71B709C20000DAB3E /* Frameworks */,
 				4FF74FD81B709C20000DAB3E /* Resources */,
 				B613CA451686D6238B5FF0E4 /* Copy Pods Resources */,
+				CFD7F6E53D17313066C6EEF3 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,6 +187,7 @@
 				4FF74FF01B709C20000DAB3E /* Frameworks */,
 				4FF74FF11B709C20000DAB3E /* Resources */,
 				02088DA63AAE0433FE0B2815 /* Copy Pods Resources */,
+				9EFCC62DE4772BDF4B4AC7B5 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,6 +304,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		9EFCC62DE4772BDF4B4AC7B5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BPushSDKTests/Pods-BPushSDKTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B613CA451686D6238B5FF0E4 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +332,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BPushSDK/Pods-BPushSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFD7F6E53D17313066C6EEF3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BPushSDK/Pods-BPushSDK-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

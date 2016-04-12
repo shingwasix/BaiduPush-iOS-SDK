@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17741AAE1CA93657009BB0BA /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17741AAC1CA93657009BB0BA /* libBPush.a */; };
+		17741AAF1CA93657009BB0BA /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = 17741AAD1CA93657009BB0BA /* test.caf */; };
 		792E5B3A1AA5981700E57331 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E5B391AA5981700E57331 /* CoreGraphics.framework */; };
 		792E5B3C1AA5982200E57331 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E5B3B1AA5982200E57331 /* CoreTelephony.framework */; };
 		792E5B3E1AA5982E00E57331 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E5B3D1AA5982E00E57331 /* libz.dylib */; };
@@ -16,13 +18,14 @@
 		E152381C1B53AB2C00AC56FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E15238141B53AB2C00AC56FB /* main.m */; };
 		E152381D1B53AB2C00AC56FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15238161B53AB2C00AC56FB /* ViewController.m */; };
 		E152381E1B53AB2C00AC56FB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15238171B53AB2C00AC56FB /* ViewController.xib */; };
-		E15238221B53AC0200AC56FB /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E15238211B53AC0200AC56FB /* libBPush.a */; };
-		E1A51A861BB2A50C005A948A /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = E1A51A851BB2A50C005A948A /* test.caf */; settings = {ASSET_TAGS = (); }; };
-		E1F8DEA81BC64F0000B5B1D3 /* SkipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F8DEA61BC64F0000B5B1D3 /* SkipViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E1F8DEA91BC64F0000B5B1D3 /* SkipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F8DEA71BC64F0000B5B1D3 /* SkipViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		E1F8DEA81BC64F0000B5B1D3 /* SkipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F8DEA61BC64F0000B5B1D3 /* SkipViewController.m */; };
+		E1F8DEA91BC64F0000B5B1D3 /* SkipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F8DEA71BC64F0000B5B1D3 /* SkipViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17741AAB1CA93657009BB0BA /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
+		17741AAC1CA93657009BB0BA /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
+		17741AAD1CA93657009BB0BA /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
 		792E5B0D1AA5963400E57331 /* DevDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		792E5B391AA5981700E57331 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		792E5B3B1AA5982200E57331 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -36,9 +39,6 @@
 		E15238151B53AB2C00AC56FB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E15238161B53AB2C00AC56FB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E15238171B53AB2C00AC56FB /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		E15238201B53AC0200AC56FB /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
-		E15238211B53AC0200AC56FB /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
-		E1A51A851BB2A50C005A948A /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
 		E1F8DEA51BC64F0000B5B1D3 /* SkipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkipViewController.h; sourceTree = "<group>"; };
 		E1F8DEA61BC64F0000B5B1D3 /* SkipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkipViewController.m; sourceTree = "<group>"; };
 		E1F8DEA71BC64F0000B5B1D3 /* SkipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkipViewController.xib; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				792E5B441AA5987400E57331 /* SystemConfiguration.framework in Frameworks */,
-				E15238221B53AC0200AC56FB /* libBPush.a in Frameworks */,
+				17741AAE1CA93657009BB0BA /* libBPush.a in Frameworks */,
 				792E5B3E1AA5982E00E57331 /* libz.dylib in Frameworks */,
 				792E5B3C1AA5982200E57331 /* CoreTelephony.framework in Frameworks */,
 				792E5B3A1AA5981700E57331 /* CoreGraphics.framework in Frameworks */,
@@ -60,10 +60,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17741AAA1CA93657009BB0BA /* normalversion */ = {
+			isa = PBXGroup;
+			children = (
+				17741AAB1CA93657009BB0BA /* BPush.h */,
+				17741AAC1CA93657009BB0BA /* libBPush.a */,
+				17741AAD1CA93657009BB0BA /* test.caf */,
+			);
+			name = normalversion;
+			path = ../../normalversion;
+			sourceTree = "<group>";
+		};
 		792E5B041AA5963400E57331 = {
 			isa = PBXGroup;
 			children = (
-				E152381F1B53AC0200AC56FB /* LibBPush */,
 				E152380D1B53AB2C00AC56FB /* BPushDevDemo */,
 				795A4FA51AA6A1F7008D06FB /* Frameworks */,
 				792E5B0E1AA5963400E57331 /* Products */,
@@ -92,6 +102,7 @@
 		E152380D1B53AB2C00AC56FB /* BPushDevDemo */ = {
 			isa = PBXGroup;
 			children = (
+				17741AAA1CA93657009BB0BA /* normalversion */,
 				E152380E1B53AB2C00AC56FB /* AppDelegate.h */,
 				E152380F1B53AB2C00AC56FB /* AppDelegate.m */,
 				E1F8DEA51BC64F0000B5B1D3 /* SkipViewController.h */,
@@ -105,17 +116,6 @@
 				E15238171B53AB2C00AC56FB /* ViewController.xib */,
 			);
 			path = BPushDevDemo;
-			sourceTree = "<group>";
-		};
-		E152381F1B53AC0200AC56FB /* LibBPush */ = {
-			isa = PBXGroup;
-			children = (
-				E15238201B53AC0200AC56FB /* BPush.h */,
-				E15238211B53AC0200AC56FB /* libBPush.a */,
-				E1A51A851BB2A50C005A948A /* test.caf */,
-			);
-			name = LibBPush;
-			path = ../LibBPush;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +150,14 @@
 					792E5B0C1AA5963400E57331 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = YCD99G68QQ;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -176,10 +184,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17741AAF1CA93657009BB0BA /* test.caf in Resources */,
 				E152381A1B53AB2C00AC56FB /* Images.xcassets in Resources */,
 				E1F8DEA91BC64F0000B5B1D3 /* SkipViewController.xib in Resources */,
 				E152381E1B53AB2C00AC56FB /* ViewController.xib in Resources */,
-				E1A51A861BB2A50C005A948A /* test.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +245,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "7e0253ff-60ff-4b0d-8245-49c0058ccaf3";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -272,6 +281,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "7e0253ff-60ff-4b0d-8245-49c0058ccaf3";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -282,18 +292,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xianwei su (52HFRJF7KH)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xianwei su (52HFRJF7KH)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				ENABLE_BITCODE = YES;
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				INFOPLIST_FILE = BPushDevDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../LibBPush";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../normalversion";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = DevDemo;
-				PROVISIONING_PROFILE = "ebcc3e07-c040-420a-ade1-44488ed8d93e";
+				PROVISIONING_PROFILE = "7e0253ff-60ff-4b0d-8245-49c0058ccaf3";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -302,18 +312,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xianwei su (52HFRJF7KH)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xianwei su (52HFRJF7KH)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				ENABLE_BITCODE = YES;
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				INFOPLIST_FILE = BPushDevDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../LibBPush";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../normalversion";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = DevDemo;
-				PROVISIONING_PROFILE = "ebcc3e07-c040-420a-ade1-44488ed8d93e";
+				PROVISIONING_PROFILE = "7e0253ff-60ff-4b0d-8245-49c0058ccaf3";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

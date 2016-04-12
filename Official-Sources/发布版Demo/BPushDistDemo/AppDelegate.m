@@ -8,6 +8,8 @@
 #import "ViewController.h"
 #import "SkipViewController.h"
 // rgb颜色转换（16进制->10进制）
+
+static BOOL isBackGroundActivateApplication;
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @interface AppDelegate ()
@@ -29,7 +31,6 @@
  */
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
@@ -48,7 +49,6 @@
     NSDictionary * dict = [NSDictionary dictionaryWithObject:cc forKey:UITextAttributeTextColor];
     nav.navigationBar.titleTextAttributes = dict;
     [nav.navigationBar setTranslucent:NO];//设置navigationbar的半透明
-    [_tabBarCtr.tabBar setTranslucent:NO];
     if ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0)
     {
         [nav.navigationBar setBarTintColor:UIColorFromRGB(0x39526d)];
@@ -73,7 +73,7 @@
     #warning 上线 AppStore 时需要修改BPushMode为BPushModeProduction 需要修改Apikey为自己的Apikey
     
     // 在 App 启动时注册百度云推送服务，需要提供 Apikey
-    [BPush registerChannel:launchOptions apiKey:<#在百度云推送官网上注册后得到的apikey#> pushMode:BPushModeProduction withFirstAction:nil withSecondAction:nil withCategory:nil isDebug:YES];
+    [BPush registerChannel:launchOptions apiKey:<#在百度云推送官网上注册后得到的apikey#> pushMode:BPushModeDevelopment withFirstAction:@"打开" withSecondAction:@"回复" withCategory:@"test" useBehaviorTextInput:YES isDebug:YES];
     // App 是用户点击推送消息启动
     NSDictionary *userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     if (userInfo) {
@@ -93,7 +93,7 @@
 {
     NSLog(@"测试本地通知啦！！！");
     NSDate *fireDate = [[NSDate new] dateByAddingTimeInterval:5];
-    [BPush localNotification:fireDate alertBody:@"这是本地通知" badge:3 withFirstAction:@"打开" withSecondAction:@"关闭" userInfo:nil soundName:nil region:nil regionTriggersOnce:YES category:nil];
+    [BPush localNotification:fireDate alertBody:@"这是本地通知" badge:3 withFirstAction:@"打开" withSecondAction:@"关闭" userInfo:nil soundName:nil region:nil regionTriggersOnce:YES category:nil useBehaviorTextInput:YES];
 }
 
 // 此方法是 用户点击了通知，应用在前台 或者开启后台并且应用在后台 时调起
@@ -102,23 +102,27 @@
     // 打印到日志 textView 中
     
     NSLog(@"********** iOS7.0之后 background **********");
-    // 应用在前台 或者后台开启状态下，不跳转页面，让用户选择。
-    if (application.applicationState == UIApplicationStateActive || application.applicationState == UIApplicationStateBackground) {
-        NSLog(@"acitve or background");
-        UIAlertView *alertView =[[UIAlertView alloc]initWithTitle:@"收到一条消息" message:userInfo[@"aps"][@"alert"] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        [alertView show];
-    }
-    else//杀死状态下，直接跳转到跳转页面。
+    //杀死状态下，直接跳转到跳转页面。
+    if (application.applicationState == UIApplicationStateInactive && !isBackGroundActivateApplication)
     {
         SkipViewController *skipCtr = [[SkipViewController alloc]init];
         // 根视图是nav 用push 方式跳转
         [_tabBarCtr.selectedViewController pushViewController:skipCtr animated:YES];
+        NSLog(@"applacation is unactive ===== %@",userInfo);
         /*
          // 根视图是普通的viewctr 用present跳转
          [_tabBarCtr.selectedViewController presentViewController:skipCtr animated:YES completion:nil]; */
     }
+    // 应用在后台。当后台设置aps字段里的 content-available 值为 1 并开启远程通知激活应用的选项
+    if (application.applicationState == UIApplicationStateBackground) {
+        NSLog(@"background is Activated Application ");
+        // 此处可以选择激活应用提前下载邮件图片等内容。
+        isBackGroundActivateApplication = YES;
+        UIAlertView *alertView =[[UIAlertView alloc]initWithTitle:@"收到一条消息" message:userInfo[@"aps"][@"alert"] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alertView show];
+    }
+    [self.viewController addLogString:[NSString stringWithFormat:@"Received Remote Notification :\n%@",userInfo]];
 
-    [self.viewController addLogString:[NSString stringWithFormat:@"backgroud : %@",userInfo]];
     completionHandler(UIBackgroundFetchResultNewData);
     NSLog(@"backgroud : %@",userInfo);
 
@@ -141,7 +145,15 @@
     [BPush bindChannelWithCompleteHandler:^(id result, NSError *error) {
         [self.viewController addLogString:[NSString stringWithFormat:@"Method: %@\n%@",BPushRequestMethodBind,result]];
         // 需要在绑定成功后进行 settag listtag deletetag unbind 操作否则会失败
+        // 网络错误
+        if (error) {
+            return ;
+        }
         if (result) {
+            // 确认绑定成功
+            if ([result[@"error_code"]intValue]!=0) {
+                return;
+            }
             [BPush setTag:@"Mytag" withCompleteHandler:^(id result, NSError *error) {
                 if (result) {
                     NSLog(@"设置tag成功");

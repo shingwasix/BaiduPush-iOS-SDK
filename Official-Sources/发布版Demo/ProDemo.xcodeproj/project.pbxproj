@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		179F87E91CA5246E0022BCC5 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 179F87E71CA5246E0022BCC5 /* libBPush.a */; };
+		179F87EA1CA5246E0022BCC5 /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = 179F87E81CA5246E0022BCC5 /* test.caf */; };
 		792E5B3A1AA5981700E57331 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E5B391AA5981700E57331 /* CoreGraphics.framework */; };
 		792E5B3C1AA5982200E57331 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E5B3B1AA5982200E57331 /* CoreTelephony.framework */; };
 		792E5B3E1AA5982E00E57331 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 792E5B3D1AA5982E00E57331 /* libz.dylib */; };
@@ -16,13 +18,14 @@
 		E15238061B53A76E00AC56FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E15237FD1B53A76E00AC56FB /* main.m */; };
 		E15238071B53A76E00AC56FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15237FF1B53A76E00AC56FB /* ViewController.m */; };
 		E15238081B53A76E00AC56FB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15238001B53A76E00AC56FB /* ViewController.xib */; };
-		E15238261B53AC2000AC56FB /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E15238251B53AC2000AC56FB /* libBPush.a */; };
-		E1A51A881BB2D04B005A948A /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = E1A51A871BB2D04B005A948A /* test.caf */; settings = {ASSET_TAGS = (); }; };
-		E1F8DEB91BCF891500B5B1D3 /* SkipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F8DEB71BCF891500B5B1D3 /* SkipViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E1F8DEBA1BCF891500B5B1D3 /* SkipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F8DEB81BCF891500B5B1D3 /* SkipViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		E1F8DEB91BCF891500B5B1D3 /* SkipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F8DEB71BCF891500B5B1D3 /* SkipViewController.m */; };
+		E1F8DEBA1BCF891500B5B1D3 /* SkipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F8DEB81BCF891500B5B1D3 /* SkipViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		179F87E61CA5246E0022BCC5 /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
+		179F87E71CA5246E0022BCC5 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
+		179F87E81CA5246E0022BCC5 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
 		792E5B0D1AA5963400E57331 /* ProDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		792E5B391AA5981700E57331 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		792E5B3B1AA5982200E57331 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -36,9 +39,7 @@
 		E15237FE1B53A76E00AC56FB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E15237FF1B53A76E00AC56FB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E15238001B53A76E00AC56FB /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		E15238241B53AC2000AC56FB /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
-		E15238251B53AC2000AC56FB /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
-		E1A51A871BB2D04B005A948A /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
+		E1B17ECF1C0D5F0400BC8843 /* ProDemo copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ProDemo copy-Info.plist"; path = "/Users/baidu/Desktop/Baidu-Push-SDK-iOS-1.4.3/发布版Demo/ProDemo copy-Info.plist"; sourceTree = "<absolute>"; };
 		E1F8DEB61BCF891500B5B1D3 /* SkipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkipViewController.h; sourceTree = "<group>"; };
 		E1F8DEB71BCF891500B5B1D3 /* SkipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkipViewController.m; sourceTree = "<group>"; };
 		E1F8DEB81BCF891500B5B1D3 /* SkipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkipViewController.xib; sourceTree = "<group>"; };
@@ -50,7 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				792E5B441AA5987400E57331 /* SystemConfiguration.framework in Frameworks */,
-				E15238261B53AC2000AC56FB /* libBPush.a in Frameworks */,
+				179F87E91CA5246E0022BCC5 /* libBPush.a in Frameworks */,
 				792E5B3E1AA5982E00E57331 /* libz.dylib in Frameworks */,
 				792E5B3C1AA5982200E57331 /* CoreTelephony.framework in Frameworks */,
 				792E5B3A1AA5981700E57331 /* CoreGraphics.framework in Frameworks */,
@@ -60,13 +61,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		179F87E51CA5246E0022BCC5 /* idfaversion */ = {
+			isa = PBXGroup;
+			children = (
+				179F87E61CA5246E0022BCC5 /* BPush.h */,
+				179F87E71CA5246E0022BCC5 /* libBPush.a */,
+				179F87E81CA5246E0022BCC5 /* test.caf */,
+			);
+			name = idfaversion;
+			path = ../../idfaversion;
+			sourceTree = "<group>";
+		};
 		792E5B041AA5963400E57331 = {
 			isa = PBXGroup;
 			children = (
-				E15238231B53AC2000AC56FB /* LibBPush */,
 				E15237F51B53A76E00AC56FB /* BPushDistDemo */,
 				795A4FA51AA6A1F7008D06FB /* Frameworks */,
 				792E5B0E1AA5963400E57331 /* Products */,
+				E1B17ECF1C0D5F0400BC8843 /* ProDemo copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +104,7 @@
 		E15237F51B53A76E00AC56FB /* BPushDistDemo */ = {
 			isa = PBXGroup;
 			children = (
+				179F87E51CA5246E0022BCC5 /* idfaversion */,
 				E15237F61B53A76E00AC56FB /* AppDelegate.h */,
 				E15237F71B53A76E00AC56FB /* AppDelegate.m */,
 				E1F8DEB61BCF891500B5B1D3 /* SkipViewController.h */,
@@ -105,17 +118,6 @@
 				E15238001B53A76E00AC56FB /* ViewController.xib */,
 			);
 			path = BPushDistDemo;
-			sourceTree = "<group>";
-		};
-		E15238231B53AC2000AC56FB /* LibBPush */ = {
-			isa = PBXGroup;
-			children = (
-				E1A51A871BB2D04B005A948A /* test.caf */,
-				E15238241B53AC2000AC56FB /* BPush.h */,
-				E15238251B53AC2000AC56FB /* libBPush.a */,
-			);
-			name = LibBPush;
-			path = ../LibBPush;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A51A881BB2D04B005A948A /* test.caf in Resources */,
+				179F87EA1CA5246E0022BCC5 /* test.caf in Resources */,
 				E1F8DEBA1BCF891500B5B1D3 /* SkipViewController.xib in Resources */,
 				E15238031B53A76E00AC56FB /* Images.xcassets in Resources */,
 				E15238081B53A76E00AC56FB /* ViewController.xib in Resources */,
@@ -282,17 +284,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Baidu Netcom Science & Technology Co.,Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Baidu Netcom Science & Technology Co.,Ltd.";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = BPushDistDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../LibBPush";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../idfaversion";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = ProDemo;
-				PROVISIONING_PROFILE = "dbbe375a-8617-40fd-8a16-43311b5093d4";
+				PROVISIONING_PROFILE = "537bc58d-698d-46d1-98a5-5ca222021afd";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -301,17 +303,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Baidu Netcom Science & Technology Co.,Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Baidu Netcom Science & Technology Co.,Ltd.";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: xianwei su (YCD99G68QQ)";
 				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = BPushDistDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../LibBPush";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../idfaversion";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = ProDemo;
-				PROVISIONING_PROFILE = "dbbe375a-8617-40fd-8a16-43311b5093d4";
+				PROVISIONING_PROFILE = "537bc58d-698d-46d1-98a5-5ca222021afd";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

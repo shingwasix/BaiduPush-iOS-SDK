@@ -25,6 +25,10 @@
     NSLog(@"绑定");
     [BPush bindChannelWithCompleteHandler:^(id result, NSError *error) {
         // 绑定返回值
+        if (result[@"response_params"][@"channel_id"]) {
+            
+        }
+        
         [self addLogString:[NSString stringWithFormat:@"Method: %@\n%@",BPushRequestMethodBind,result]];
     }];
 }

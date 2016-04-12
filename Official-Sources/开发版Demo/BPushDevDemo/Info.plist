@@ -22,8 +22,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>后台使用位置信息</string>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>fetch</string>
+		<string>newsstand-content</string>
 		<string>remote-notification</string>
 	</array>
 	<key>UIFileSharingEnabled</key>

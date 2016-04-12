@@ -8,41 +8,46 @@
 百度推送iOS SDK
 
 ## 简介
-此为非官方整理用于CocoaPods部署的项目，其中`Official-Sources`文件夹下的文件为百度推送官方网站下载的SDK文件。若安装后有任何问题，请先校验静态库，确保下载的文件正确。
-
-## 校验
-
-[libBPush.a](https://github.com/shingwasix/BaiduPush-iOS-SDK/blob/1.4.3/Official-Sources/LibBPush/libBPush.a)
-- MD5:`9e0eb8730cf7a21fa38a8439bd139f8d`
-- SHA1:`adc4e078c2c4d03ec3f5af12501aff51735338e4`
+此为非官方整理用于使用 [CocoaPods] 部署的项目，其中`Official-Sources`文件夹下的文件为百度推送官方网站下载的SDK文件。从1.4.4版本开始，该SDK包含normal和idfa两个不同的版本，请自行根据需求安装。
 
 ## 版本
-1.4.3 [更新时间:2015-10-16]
+1.4.4 [更新时间:2016-03-25]
 
 ## 兼容平台
 iOS 5.1及以上
 
 ## 官方更新说明
-1. 优化日志上传策略，更准确的获取统计数据。
-2. 添加崩溃日志上传，第一时间搜集到崩溃信息，更快的优化sdk。
-3. demo 去除警告，添加接受到通知后，在前台、后台、未激活状态下，点击通知跳转到指定页面,包括如何设置角标等。
-4. 配合服务端适配httpsTLS1.2协议，sdk全面适配iOS9。
+1. 修复之前遗留的开启bitcode打包报错,sdk偶现崩溃,iOS8通知样式不 显示的bug。
+2. 添加iOS9快捷回复的特性。
+3. 添加idfa版本和非idfa版本。(idfa版本统计效果会更加好)
+4. 添加lbs信息收集,可以进行基于 地理位置的推送,需要再app的info.plist文件中添加获取地理位置的字段 NSLocationAlwaysUsageDescription 后台使用位置信息。
+5. 由于苹果 在15年2月份对idfa的使用进行了限制,没有接入公告服务的app不能采 用idfa,需要跟据自己app的情况进行接入,否则会审核通过不了。否则 会审核通过不了。
 
 ## 使用
-可手动下载后参照[百度push服务sdk用户手册（ios版）.pdf](https://github.com/shingwasix/BaiduPush-iOS-SDK/blob/1.4.3/Official-Sources/%E7%99%BE%E5%BA%A6push%E6%9C%8D%E5%8A%A1sdk%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C%EF%BC%88ios%E7%89%88%EF%BC%89.pdf)进行配置
+可手动下载后参照[百度push服务sdk用户手册（ios版）.pdf](https://github.com/shingwasix/BaiduPush-iOS-SDK/blob/1.4.4/Official-Sources/百度push服务sdk用户手册（ios版）.pdf)进行配置
 
 或
 
-使用[CocoaPods](http://cocoapods.org/)进行安装,在`Podfile`中添加如下代码
+使用 [CocoaPods] 进行安装，可根据实际需求添加以下代码的任意一行到`Podfile`中，其中idfa版本需要应用包含广告服务，否则提交到App Store审核会不通过
 
 ```ruby
+# 等同于normal版本
 pod 'BPushSDK'
+# normal版本
+pod 'BPushSDK/normal'
+# idfa版本
+pod 'BPushSDK/idfa'
 ```
 
 或
 
 ```ruby
+# 等同于normal版本
 pod 'SS-BaiduPushSDK'
+# normal版本
+pod 'SS-BaiduPushSDK/normal'
+# idfa版本
+pod 'SS-BaiduPushSDK/idfa'
 ```
 
 ## 官方下载
@@ -54,3 +59,5 @@ http://push.baidu.com/doc/ios/api
 ## License
 
 LICENSE ©2015 Baidu, Inc. All rights reserved.
+
+[CocoaPods]: http://cocoapods.org/

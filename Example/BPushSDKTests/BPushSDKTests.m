@@ -27,7 +27,7 @@
 }
 
 - (void)testExample {
-    [BPush registerChannel:nil apiKey:nil pushMode:BPushModeDevelopment withFirstAction:nil withSecondAction:nil withCategory:nil isDebug:YES];
+    [BPush registerChannel:nil apiKey:nil pushMode:BPushModeDevelopment withFirstAction:nil withSecondAction:nil withCategory:nil useBehaviorTextInput:NO isDebug:YES];
 }
 
 @end

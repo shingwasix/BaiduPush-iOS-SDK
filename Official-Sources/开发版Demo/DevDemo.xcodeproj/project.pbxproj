@@ -303,7 +303,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../normalversion";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = DevDemo;
-				PROVISIONING_PROFILE = "7e0253ff-60ff-4b0d-8245-49c0058ccaf3";
+				PROVISIONING_PROFILE = "614fb35e-de08-45b7-9e1e-b9bd67016cb5";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -323,7 +323,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../normalversion";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = DevDemo;
-				PROVISIONING_PROFILE = "7e0253ff-60ff-4b0d-8245-49c0058ccaf3";
+				PROVISIONING_PROFILE = "614fb35e-de08-45b7-9e1e-b9bd67016cb5";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

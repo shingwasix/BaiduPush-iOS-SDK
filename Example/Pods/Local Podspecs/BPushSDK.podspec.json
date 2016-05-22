@@ -1,7 +1,7 @@
 {
   "name": "BPushSDK",
-  "version": "1.4.4",
-  "license": "LICENSE ©2015 Baidu, Inc. All rights reserved",
+  "version": "1.4.5",
+  "license": "LICENSE ©2016 Baidu, Inc. All rights reserved",
   "summary": "Baidu Push SDK for iOS.",
   "homepage": "http://push.baidu.com/doc/ios/api",
   "documentation_url": "http://push.baidu.com/doc/ios/api",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/shingwasix/BaiduPush-iOS-SDK.git",
-    "tag": "1.4.4"
+    "tag": "1.4.5"
   },
   "frameworks": [
     "Foundation",

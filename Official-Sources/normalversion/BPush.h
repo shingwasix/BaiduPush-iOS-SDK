@@ -1,6 +1,6 @@
 //
 //  BPush.h
-//  Version: 1.4.4
+//  Version: 1.4.5
 //  百度云推送iOS版本头文件 //
 //
 
@@ -82,6 +82,15 @@ typedef void (^BPushCallBack)(id result, NSError *error);
  *     none
  */
 + (void)setBduss:(NSString *)bduss forApp:(NSString *)appid;
+
+/**
+ * 关闭 lbs
+ * @param
+ *      - 关闭lbs推送模式，默认是开启的，用户可以选择关闭 需要在调用绑定接口前调用。
+ * @return
+ *     none
+ */
++ (void)disableLbs;
 
 /**
  * @brief 绑定channel.将会在回调中看获得channnelid appid userid 等。

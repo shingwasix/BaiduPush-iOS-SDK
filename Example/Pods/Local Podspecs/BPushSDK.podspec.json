@@ -1,6 +1,6 @@
 {
   "name": "BPushSDK",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "summary": "Baidu Push SDK for iOS.",
   "homepage": "https://github.com/shingwasix/BaiduPush-iOS-SDK",
   "license": {
@@ -11,7 +11,7 @@
     "Shingwa Six": "https://github.com/shingwasix"
   },
   "source": {
-    "http": "http://boscdn.bpc.baidu.com/channelpush/sdk/BPush-SDK-iOS-1.4.7.zip",
+    "http": "http://boscdn.bpc.baidu.com/channelpush/sdk/BPush-SDK-iOS-1.4.8.zip",
     "sha1": "15129c4b245c3b606fbc911b692d40f6c01ab611"
   },
   "platforms": {
@@ -28,9 +28,9 @@
   "subspecs": [
     {
       "name": "normal",
-      "source_files": "BPush-SDK-iOS-1.4.7/normalversion/*.h",
-      "public_header_files": "BPush-SDK-iOS-1.4.7/normalversion/*.h",
-      "vendored_libraries": "BPush-SDK-iOS-1.4.7/normalversion/*.a",
+      "source_files": "BPush-SDK-iOS-1.4.8/normalversion/*.h",
+      "public_header_files": "BPush-SDK-iOS-1.4.8/normalversion/*.h",
+      "vendored_libraries": "BPush-SDK-iOS-1.4.8/normalversion/*.a",
       "frameworks": [
         "Foundation",
         "CoreTelephony",
@@ -40,9 +40,9 @@
     },
     {
       "name": "idfa",
-      "source_files": "BPush-SDK-iOS-1.4.7/idfaversion/*.h",
-      "public_header_files": "BPush-SDK-iOS-1.4.7/idfaversion/*.h",
-      "vendored_libraries": "BPush-SDK-iOS-1.4.7/idfaversion/*.a",
+      "source_files": "BPush-SDK-iOS-1.4.8/idfaversion/*.h",
+      "public_header_files": "BPush-SDK-iOS-1.4.8/idfaversion/*.h",
+      "vendored_libraries": "BPush-SDK-iOS-1.4.8/idfaversion/*.a",
       "frameworks": [
         "Foundation",
         "CoreTelephony",

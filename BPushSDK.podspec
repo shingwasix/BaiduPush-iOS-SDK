@@ -1,31 +1,31 @@
 Pod::Spec.new do |s|
-	s.name         = "BPushSDK"
-	s.version      = "1.4.5"
-	s.license      = 'LICENSE ©2016 Baidu, Inc. All rights reserved'
-	s.summary      = "Baidu Push SDK for iOS."
-	s.homepage     = "http://push.baidu.com/doc/ios/api"
-	s.documentation_url = "http://push.baidu.com/doc/ios/api"
-	s.author       = { "Shingwa Six" => "http://github.com/shingwasix" }
-	s.platform     = :ios, "5.1"
-	s.source       = { :git => "https://github.com/shingwasix/BaiduPush-iOS-SDK.git", :tag => s.version.to_s }
-	s.framework = 'Foundation','CoreTelephony','SystemConfiguration'
-	s.libraries = 'z'
-	s.requires_arc = false
-    s.default_subspecs    = 'normal'
+  s.name         = 'BPushSDK'
+  s.version      = '1.4.6'
+  s.summary      = 'Baidu Push SDK for iOS.'
+  s.homepage     = 'https://github.com/shingwasix/BaiduPush-iOS-SDK'
+  s.license      = { :type => 'Copyright', :text => 'LICENSE ©2015-2017 Baidu, Inc. All rights reserved' }
+  s.author       = { 'Shingwa Six' => 'https://github.com/shingwasix' }
+  s.source       = { :http => 'http://boscdn.bpc.baidu.com/channelpush/sdk/BPush-SDK-iOS-1.4.6.zip', :sha1 => '3c14e6b77a0bbcbd75461424b2f9dee388941a0a' }
   
-	s.subspec 'normal' do |sp|
-		sp.source_files = "Official-Sources/normalversion/*.h"
-		sp.public_header_files = "Official-Sources/normalversion/*.h"
-		sp.vendored_libraries = "Official-Sources/normalversion/*.a"
-		sp.framework = 'Foundation','CoreTelephony','SystemConfiguration'
-		sp.libraries = 'z'
-	end
+  s.ios.deployment_target = '5.1'
+  s.frameworks = 'Foundation','CoreTelephony','SystemConfiguration'
+  s.libraries = 'z'
+  s.requires_arc = false
+  s.default_subspecs = 'normal'
   
-	s.subspec 'idfa' do |sp|
-		sp.source_files = "Official-Sources/idfaversion/*.h"
-		sp.public_header_files = "Official-Sources/idfaversion/*.h"
-		sp.vendored_libraries = "Official-Sources/idfaversion/*.a"
-		sp.framework = 'Foundation','CoreTelephony','SystemConfiguration'
-		sp.libraries = 'z'
-	end
+  s.subspec 'normal' do |sp|
+    sp.source_files = 'BPush-SDK-iOS-1.4.6/normalversion/*.h'
+    sp.public_header_files = 'BPush-SDK-iOS-1.4.6/normalversion/*.h'
+    sp.vendored_libraries = 'BPush-SDK-iOS-1.4.6/normalversion/*.a'
+    sp.frameworks = 'Foundation','CoreTelephony','SystemConfiguration'
+    sp.libraries = 'z'
+  end
+  
+  s.subspec 'idfa' do |sp|
+    sp.source_files = 'BPush-SDK-iOS-1.4.6/idfaversion/*.h'
+    sp.public_header_files = 'BPush-SDK-iOS-1.4.6/idfaversion/*.h'
+    sp.vendored_libraries = 'BPush-SDK-iOS-1.4.6/idfaversion/*.a'
+    sp.frameworks = 'Foundation','CoreTelephony','SystemConfiguration'
+    sp.libraries = 'z'
+  end
 end

@@ -1,1 +1,1 @@
-../../../../../Official-Sources/normalversion/BPush.h
+../../../../../BPush-SDK-iOS-1.4.6/normalversion/BPush.h

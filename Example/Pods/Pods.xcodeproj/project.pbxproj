@@ -16,13 +16,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03C647C53BA456CAF503A3E54BA08CF2 /* BPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
 		04FD9FC5D4062F43C5B3725877082A0D /* Pods-BPushSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BPushSDK_Tests-dummy.m"; sourceTree = "<group>"; };
 		13C450D072447A1831D0FBFEEEA65A03 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1503FCDE008FAE0BC2B1BCFBF3D5CDFA /* libBPush.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libBPush.a; path = "BPush-SDK-iOS-1.4.6/normalversion/libBPush.a"; sourceTree = "<group>"; };
 		228B63FCF670FD8DFE45019224E44877 /* Pods-BPushSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BPushSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		2F398F3EC9CEDA073B8E51C691DE098E /* Pods-BPushSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BPushSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
 		309383BFB45062141F45323AF4DBEB14 /* Pods-BPushSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BPushSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3DB0B93D870966201668B38938D5E17F /* BPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
 		3F3EAA60046A002133A256C23DFF1AAA /* Pods-BPushSDK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BPushSDK_Example-resources.sh"; sourceTree = "<group>"; };
 		51517C24E65AC328D3B63391552D8641 /* Pods-BPushSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BPushSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6059E984E4BB22662590D2CD306BD208 /* Pods-BPushSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BPushSDK_Tests.modulemap"; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		C326A61A21608D3AB82FC8C560A8DCA0 /* Pods-BPushSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BPushSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DC45D44B408B27D2D809024015F3E51A /* Pods-BPushSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BPushSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E52CD7600BA5D9B2BAB6A1BC456234B7 /* libBPush.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libBPush.a; path = "BPush-SDK-iOS-1.4.7/normalversion/libBPush.a"; sourceTree = "<group>"; };
 		E73D69736577383D9BB3736425EFF7F2 /* Pods-BPushSDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BPushSDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		FED849E90BEFD7B323215BC452D54A72 /* Pods-BPushSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BPushSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,10 +64,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092AAB2AF5D1A0AD339426D2D76489F1 /* BPush-SDK-iOS-1.4.7 */ = {
+			isa = PBXGroup;
+			children = (
+				1CDC1CE74A519BF832D3FC7A0F68D30E /* normalversion */,
+			);
+			name = "BPush-SDK-iOS-1.4.7";
+			path = "BPush-SDK-iOS-1.4.7";
+			sourceTree = "<group>";
+		};
+		1CDC1CE74A519BF832D3FC7A0F68D30E /* normalversion */ = {
+			isa = PBXGroup;
+			children = (
+				03C647C53BA456CAF503A3E54BA08CF2 /* BPush.h */,
+			);
+			name = normalversion;
+			path = normalversion;
+			sourceTree = "<group>";
+		};
 		2496AB129C4972ED2B06389232250810 /* BPushSDK */ = {
 			isa = PBXGroup;
 			children = (
-				E3F79AF592ED6E7230EADFCBEDCAA703 /* normal */,
+				D9214910003BC81236CA65CC9FAE9A42 /* normal */,
 			);
 			name = BPushSDK;
 			path = ../..;
@@ -90,20 +108,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		661973B9F7B9430B40C5DABD37D77525 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1503FCDE008FAE0BC2B1BCFBF3D5CDFA /* libBPush.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		7C72D2C2BF5CA1B17E66FCB49FB8A798 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E52CD7600BA5D9B2BAB6A1BC456234B7 /* libBPush.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -170,31 +188,13 @@
 			path = "Target Support Files/Pods-BPushSDK_Example";
 			sourceTree = "<group>";
 		};
-		CB57F9D6F01C095A1FB7A9021D64240C /* BPush-SDK-iOS-1.4.6 */ = {
+		D9214910003BC81236CA65CC9FAE9A42 /* normal */ = {
 			isa = PBXGroup;
 			children = (
-				FFF10B1D4053F129C48723888CAFACA2 /* normalversion */,
-			);
-			name = "BPush-SDK-iOS-1.4.6";
-			path = "BPush-SDK-iOS-1.4.6";
-			sourceTree = "<group>";
-		};
-		E3F79AF592ED6E7230EADFCBEDCAA703 /* normal */ = {
-			isa = PBXGroup;
-			children = (
-				CB57F9D6F01C095A1FB7A9021D64240C /* BPush-SDK-iOS-1.4.6 */,
-				661973B9F7B9430B40C5DABD37D77525 /* Frameworks */,
+				092AAB2AF5D1A0AD339426D2D76489F1 /* BPush-SDK-iOS-1.4.7 */,
+				7C72D2C2BF5CA1B17E66FCB49FB8A798 /* Frameworks */,
 			);
 			name = normal;
-			sourceTree = "<group>";
-		};
-		FFF10B1D4053F129C48723888CAFACA2 /* normalversion */ = {
-			isa = PBXGroup;
-			children = (
-				3DB0B93D870966201668B38938D5E17F /* BPush.h */,
-			);
-			name = normalversion;
-			path = normalversion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

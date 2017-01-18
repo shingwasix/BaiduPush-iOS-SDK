@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'BPushSDK_Example' do
-  pod 'BPushSDK', :path => '../'
+  pod 'BPushSDK'
 
   target 'BPushSDK_Tests' do
     inherit! :search_paths
